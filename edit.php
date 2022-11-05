@@ -57,11 +57,12 @@
             <small id="contactHelp" class="form-text text-muted">Contact 
             will never be shared with anyone else</small>
         </div>
-        <div class="d-grid gap-2">
+        
+            <a href="viewrecords.php" class="btn btn-secondary">Back to List</a>
               <button type="submit" name="submit"  class="btn btn-success btn-block ">Save Changes</button>
         
   
-</div>
+
     </form>
     <?php } ?>
 <br/>
