@@ -11,7 +11,7 @@
         <th>Last Name</th>
         <th>Speciality</th>
         <th>Actions<th>
-        <tbody class="table-group-divider"></tbody>
+        
 </tr>
     <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){  ?>
         <tr>

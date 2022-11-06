@@ -1,8 +1,22 @@
 <?php
-$host = 'localhost';
-$db = 'attendance';
-$user = 'root';
-$pass = '';
+
+//Development Connection
+//$host = 'localhost';
+//$db = 'attendance';
+//$user = 'root';
+//$pass = '';
+//$charset = 'utf8mb4';
+
+//$host = 'remotemysql.com';
+//$db = 'jdjXdoiruy';
+//$user = 'jdjXdoiruy';
+//$pass = '3zFvp7DSjF';
+//$charset = 'utf8mb4';
+
+$host = 'applied-web.mysql.database.azure.com';
+$db = 'attendance_coke';
+$user = 'appliedweb_user@applied-web';
+$pass = 'P@ssword1';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
