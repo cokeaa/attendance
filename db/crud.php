@@ -8,10 +8,11 @@
             $this->db= $conn;
         }
             //function to insert a new record into the attendee database
-        public function insertAttendees($fname, $lname, $dob, $speciality,$email, $contact){
+        public function insertAttendees($fname, $lname, $dob, $speciality,$avatar_path,$email, $contact){
             try {
                 //define sql statement to be executed
-                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,speciality_id,emailaddress,contactnumber)VALUES(:fname,:lname,:dob,:speciality,:email,:contact)";
+                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,speciality_id,avatar_path,emailaddress,
+                contactnumber)VALUES(:fname,:lname,:dob,:speciality,:avatar_path,:email,:contact)";
                 //prepare the sql statement to be excecution
                 $stmt = $this->db->prepare($sql);
                 //bind all placeholders to the actual values
@@ -19,8 +20,11 @@
                 $stmt->bindparam(':lname',$lname);
                 $stmt->bindparam(':dob',$dob);
                 $stmt->bindparam(':speciality',$speciality);
+                $stmt->bindparam(':avatar_path',$avatar_path);
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':contact',$contact);
+                
+
                 //execute statement
                 $stmt->execute();
                 return true;

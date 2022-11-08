@@ -20,31 +20,31 @@ include_once 'includes/session.php'?>
 
     <title>Attendance - <?php echo $title ?></title>
     </head>
-
   <body>
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-     <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="index.php">IT Conference</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mx-auto">
-        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        <div class="navbar-nav mr-auto">
+        <a class="nav-link active" href="index.php">Home<span class="sr-only"></span></a>
         <a class="nav-link" href="viewrecords.php">View Attendees</a>
       </div>
-        <div class="navbar-nav me-auto">
+        
         <?php
             if(!isset($_SESSION['userid'])){
         ?>
-          <a class="nav-link" aria-current="page" href="login.php">Login <span class="sr-only"></span></a>
+        <div class="nav-item navbar-nav ml-auto">
+          <a class="nav-link" href="login.php">Login<span class="sr-only"></span></a>
           <?php }else { ?>    
-           <a class="nav-link" href="#"> <span>Hello <?php echo $_SESSION['username'] ?>! </span><span class="sr-only"></span></a>
-            <a class="nav-link" aria-current="page" href="logout.php">Logout <span class="sr-only"></span></a>
+           <a class="nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span>
+           <span class="sr-only">(current)</span></a>
+            <a class="nav-link"href="logout.php">Logout <span class="sr-only"></span></a>
             <?php } ?>
               </div>
-    </div>
-  </div>
-</nav>
-<br/>
+          </div>
+          </nav>
+      <div class="container">
+    
+  <br/>

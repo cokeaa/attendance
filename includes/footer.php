@@ -1,7 +1,7 @@
 
-<div id="footer">
-    <?php echo 'Copyright ' .date('y');  ?>
-    </div>
+<div id="footer" class="p-3 md=2 bg-primary text-white fixed-bottom">
+  <p class="text-center">Copyright &copy; -IT Conference Attendance System <?php echo date('Y');?>
+  ></p>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

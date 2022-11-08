@@ -16,7 +16,7 @@
 
     <h1 class="text-center">Registration for IT Conference  </h1>
 
-    <form method="post" action="success.php">
+    <form method="post" enctype="multipart/form-data" action="success.php">
         <div class="form-group">
             <label for="firstname">First Name</label>
             <input required type="text" class="form-control" id="firstname" name="firstname">
@@ -53,6 +53,13 @@
             <small id="contactHelp" class="form-text text-muted">Contact 
             will never be shared with anyone else</small>
         </div>
+        <br/>
+        
+        <div class="container-fluid">
+        <input type="file"accept="image/*" class="form-control me-2"  id="avatar"  name="avatar" >
+      <small id="avatar" class="form-text text-success">Form upload is optional.</small>
+      </div>
+
         
         <div class="d-grid gap-2">
               <button type="submit" name="submit"  class="btn btn-primary ">Submit</button>
