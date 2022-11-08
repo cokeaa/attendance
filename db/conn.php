@@ -1,18 +1,18 @@
 <?php
 
 //Development Connection
-$host = 'localhost';
-$db = 'attendance';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
+//$host = 'localhost';
+//$db = 'attendance';
+//$user = 'root';
+//$pass = '';
+//$charset = 'utf8mb4';
 
 //Remote Database Connection
-//$host = 'applied-web.mysql.database.azure.com';
-//$db = 'attendance_coke';
-//$user = 'appliedweb_user@applied-web';
-//$pass = 'P@ssword1';
-//$charset = 'utf8mb4';
+$host = 'applied-web.mysql.database.azure.com';
+$db = 'attendance_coke';
+$user = 'appliedweb_user@applied-web';
+$pass = 'P@ssword1';
+$charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
