@@ -54,14 +54,14 @@
             </p>
         </div>
      </div> -->
-
+<!-- This prints out values that were passed to the action page using method="post"-->
      <img src="<?php echo $destination;?>" class="rounded" style="width: 20%; height: 20% "/>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">
-            <?php echo $_POST['firstname'] .' ' .$_POST['lastname']; ?>
+            <?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?>
             </h5>
-             <h6 class="card-title mb-2 text muted">
+             <h6 class="card-subtitle mb-2 text muted">
                     <?php echo $specialityName['name']; ?>
             </h6>
             <p class="card-text">   

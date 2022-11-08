@@ -1,9 +1,11 @@
 <?php 
     $title = 'User Login';
+
     require_once 'includes/header.php';
     require_once 'db/conn.php';
-
+    
     //if data was submitted via a form POST request, then....
+       
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $username = strtolower(trim($_POST['username']));
         $password = $_POST['password'];
@@ -14,7 +16,7 @@
             echo '<div class=" alert alert-danger">Username or Password is incorrect! Please try again. </div>';
         }else{
             $_SESSION['username'] = $username;
-            $_SESSION['id'] = $result['id'];
+            $_SESSION['userid'] = $result['id'];
             header("Location: viewrecords.php");
 
         }
@@ -42,5 +44,4 @@
               
    </form><br/><br/>
 
-   <?php include_once 'includes/footer.php';
-?>
+   <?php include_once 'includes/footer.php'?>

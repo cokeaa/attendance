@@ -31,18 +31,19 @@ include_once 'includes/session.php'?>
         <a class="nav-link active" href="index.php">Home<span class="sr-only"></span></a>
         <a class="nav-link" href="viewrecords.php">View Attendees</a>
       </div>
-        
-        <?php
+
+          <?php
             if(!isset($_SESSION['userid'])){
         ?>
-        <div class="nav-item navbar-nav ml-auto">
-          <a class="nav-link" href="login.php">Login<span class="sr-only"></span></a>
+          <a class="nav-link" aria-current="page" href="login.php">Login <span class="sr-only"></span></a>
           <?php }else { ?>    
-           <a class="nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span>
-           <span class="sr-only">(current)</span></a>
-            <a class="nav-link"href="logout.php">Logout <span class="sr-only"></span></a>
+           <a class="nav-link" href="#"> <span>Hello <?php echo $_SESSION['username'] ?>! </span><span class="sr-only"></span></a>
+            <a class="nav-link" aria-current="page" href="logout.php">Logout <span class="sr-only"></span></a>
             <?php } ?>
               </div>
+
+
+        
           </div>
           </nav>
       <div class="container">
